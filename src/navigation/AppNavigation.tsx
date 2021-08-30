@@ -7,7 +7,7 @@ import {
 import i18n from '../common/i18n/i18n'
 import AppParams from './AppParams'
 import WelcomeScreen from '../screens/WelcomeScreen/WelcomeScreen'
-import MoreScreen from '../screens/MoreStackScreens/MoreScreen'
+import MoreScreen from '../screens/MoreStackScreens/MoreScreen/MoreScreen'
 import ListsScreen from '../screens/ListsStackScreens/ListsScreen'
 import ChooseLearnMethodScreen from '../screens/LearnStackScreens/ChooseLearnMethodScreen'
 import {
@@ -16,6 +16,10 @@ import {
     MoreStackHeaderOptions,
 } from './AppHeaderOptions'
 import APP_COLORS from '../common/colors'
+import SettingsScreen from '../screens/MoreStackScreens/SettingsScreen'
+import FeaturesScreen from '../screens/MoreStackScreens/FeaturesScreen'
+import AboutScreen from '../screens/MoreStackScreens/AboutScreen'
+import ForGeeksScreen from '../screens/MoreStackScreens/ForGeeksScreen'
 
 const Stack = createStackNavigator<AppParams>()
 
@@ -41,6 +45,26 @@ const AppNavigation = () => (
                 name="MoreScreen"
                 component={MoreScreen}
                 options={MoreScreenOptions}
+            />
+            <Stack.Screen
+                name="SettingsScreen"
+                component={SettingsScreen}
+                options={SettingsScreenOptions}
+            />
+            <Stack.Screen
+                name="FeaturesScreen"
+                component={FeaturesScreen}
+                options={FeaturesScreenOptions}
+            />
+            <Stack.Screen
+                name="AboutScreen"
+                component={AboutScreen}
+                options={AboutScreenOptions}
+            />
+            <Stack.Screen
+                name="ForGeeksScreen"
+                component={ForGeeksScreen}
+                options={ForGeeksScreenOptions}
             />
         </Stack.Navigator>
     </NavigationContainer>
@@ -69,6 +93,24 @@ const ListsScreenOptions: StackNavigationOptions = {
 
 const MoreScreenOptions: StackNavigationOptions = {
     title: i18n.t('more'),
+    ...MoreStackHeaderOptions,
+}
+
+const SettingsScreenOptions: StackNavigationOptions = {
+    title: i18n.t('settings').toUpperCase(),
+    ...MoreStackHeaderOptions,
+}
+
+const FeaturesScreenOptions: StackNavigationOptions = {
+    title: i18n.t('features').toUpperCase(),
+    ...MoreStackHeaderOptions,
+}
+const AboutScreenOptions: StackNavigationOptions = {
+    title: i18n.t('about').toUpperCase(),
+    ...MoreStackHeaderOptions,
+}
+const ForGeeksScreenOptions: StackNavigationOptions = {
+    title: i18n.t('for_geeks').toUpperCase(),
     ...MoreStackHeaderOptions,
 }
 
