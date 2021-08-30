@@ -29,6 +29,7 @@
         "no-undef": "off",
         "global-require": "off",
         "no-shadow": "off",
+        "react/jsx-props-no-spreading": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
