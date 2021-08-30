@@ -1,1 +1,4 @@
-{}
+{
+  "alert_successful_title": "Hurra!",
+  "alert_error_title": "Ups!"
+}
