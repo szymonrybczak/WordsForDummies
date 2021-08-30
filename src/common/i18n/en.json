@@ -1,4 +1,9 @@
 {
   "alert_successful_title": "Hurra!",
-  "alert_error_title": "Ups!"
+  "alert_error_title": "Ups!",
+  "hello_dummy": "Hello, dummy!",
+  "learn": "LEARN",
+  "your_lists": "YOUR LISTS",
+  "more": "MORE",
+  "choose_method": "CHOOSE METHOD"
 }
