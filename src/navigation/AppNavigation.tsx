@@ -48,7 +48,7 @@ const AppNavigation = () => (
 
 const AppNavigationOptions: StackNavigationOptions = {
     headerTintColor: APP_COLORS.white,
-    title: ' ',
+    headerBackTitle: ' ',
 }
 
 const WelcomeScreenOptions: StackNavigationOptions = {
