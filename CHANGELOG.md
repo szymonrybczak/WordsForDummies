@@ -1,3 +1,4 @@
+- Create welcome screen
 - Create navigator
 - Add dropdown alert manager
 - Add i18n
