@@ -23,5 +23,20 @@
   "boom": "BOOM",
   "released": "RELEASED",
   "upcoming": "UPCOMING",
-  "sharing_lists_between_users": "Sharing lists between users"
+  "sharing_lists_between_users": "Sharing lists between users",
+  "next": "Next",
+  "add": "ADD",
+  "create": "Create",
+  "okay": "OKAY",
+  "edit": "EDIT",
+  "done": "Done",
+  "delete": "Delete",
+  "update": "Update",
+  "first_step": "FIRST STEP",
+  "almost_done": "ALMOST DONE",
+  "type_list_name": "Type name of list you wanna create",
+  "describe_your_list": "describe your list",
+  "word_to_translate": "Word to translate",
+  "word_translation": "Translation of word",
+  "no_enough_items_in_list": "List you'd like to create\ndoesn't have enough\nwords to prepare quiz\n(minimal amount: 4)"
 }
