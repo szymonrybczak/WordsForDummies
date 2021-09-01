@@ -8,7 +8,7 @@ import i18n from '../common/i18n/i18n'
 import AppParams from './AppParams'
 import WelcomeScreen from '../screens/WelcomeScreen/WelcomeScreen'
 import MoreScreen from '../screens/MoreStackScreens/MoreScreen/MoreScreen'
-import ListsScreen from '../screens/ListsStackScreens/ListsScreen'
+import ListsScreen from '../screens/ListsStackScreens/ListsScreen/ListsScreen'
 import ChooseLearnMethodScreen from '../screens/LearnStackScreens/ChooseLearnMethodScreen'
 import {
     LearnStackHeaderOptions,
@@ -20,6 +20,8 @@ import SettingsScreen from '../screens/MoreStackScreens/SettingsScreen'
 import FeaturesScreen from '../screens/MoreStackScreens/FeaturesScreen'
 import AboutScreen from '../screens/MoreStackScreens/AboutScreen'
 import ForGeeksScreen from '../screens/MoreStackScreens/ForGeeksScreen'
+import AddListNameScreen from '../screens/ListsStackScreens/AddListNameScreen'
+import AddWordsScreen from '../screens/ListsStackScreens/AddWordsScreen/AddWordsScreen'
 
 const Stack = createStackNavigator<AppParams>()
 
@@ -40,6 +42,16 @@ const AppNavigation = () => (
                 name="ListsScreen"
                 component={ListsScreen}
                 options={ListsScreenOptions}
+            />
+            <Stack.Screen
+                name="AddListNameScreen"
+                component={AddListNameScreen}
+                options={AddListNameScreenOptions}
+            />
+            <Stack.Screen
+                name="AddWordsScreen"
+                component={AddWordsScreen}
+                options={AddWordsScreenOptions}
             />
             <Stack.Screen
                 name="MoreScreen"
@@ -88,6 +100,15 @@ const ChooseLearnMethodScreenOptions: StackNavigationOptions = {
 
 const ListsScreenOptions: StackNavigationOptions = {
     title: i18n.t('your_lists'),
+    ...ListsStackHeaderOptions,
+}
+
+const AddListNameScreenOptions: StackNavigationOptions = {
+    title: i18n.t('first_step'),
+    ...ListsStackHeaderOptions,
+}
+
+const AddWordsScreenOptions: StackNavigationOptions = {
     ...ListsStackHeaderOptions,
 }
 
