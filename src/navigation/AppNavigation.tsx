@@ -22,6 +22,12 @@ import AboutScreen from '../screens/MoreStackScreens/AboutScreen'
 import ForGeeksScreen from '../screens/MoreStackScreens/ForGeeksScreen'
 import AddListNameScreen from '../screens/ListsStackScreens/AddListNameScreen'
 import AddWordsScreen from '../screens/ListsStackScreens/AddWordsScreen/AddWordsScreen'
+import ChooseQuizTypeScreen from '../screens/LearnStackScreens/ChooseQuizTypeScreen'
+import ChooseListScreen from '../screens/LearnStackScreens/ChooseListScreen'
+import QuizScreen from '../screens/LearnStackScreens/Quiz/QuizScreen'
+import SuccessQuizScreen from '../screens/LearnStackScreens/Quiz/SuccessQuizScreen'
+import ExamScreen from '../screens/LearnStackScreens/Exam/ExamScreen'
+import SuccessExamScreen from '../screens/LearnStackScreens/Exam/SuccessExamScreen'
 
 const Stack = createStackNavigator<AppParams>()
 
@@ -37,6 +43,36 @@ const AppNavigation = () => (
                 name="ChooseLearnMethodScreen"
                 component={ChooseLearnMethodScreen}
                 options={ChooseLearnMethodScreenOptions}
+            />
+            <Stack.Screen
+                name="ChooseQuizTypeScreen"
+                component={ChooseQuizTypeScreen}
+                options={ChooseQuizTypeScreenOptions}
+            />
+            <Stack.Screen
+                name="ChooseListScreen"
+                component={ChooseListScreen}
+                options={ChooseListScreenOptions}
+            />
+            <Stack.Screen
+                name="QuizScreen"
+                component={QuizScreen}
+                options={QuizScreenOptions}
+            />
+            <Stack.Screen
+                name="SuccessQuizScreen"
+                component={SuccessQuizScreen}
+                options={SuccessQuizScreenOptions}
+            />
+            <Stack.Screen
+                name="ExamScreen"
+                component={ExamScreen}
+                options={ExamScreenOptions}
+            />
+            <Stack.Screen
+                name="SuccessExamScreen"
+                component={SuccessExamScreen}
+                options={SuccessExamScreenOptions}
             />
             <Stack.Screen
                 name="ListsScreen"
@@ -95,6 +131,36 @@ const WelcomeScreenOptions: StackNavigationOptions = {
 
 const ChooseLearnMethodScreenOptions: StackNavigationOptions = {
     title: i18n.t('choose_method'),
+    ...LearnStackHeaderOptions,
+}
+
+const ChooseQuizTypeScreenOptions: StackNavigationOptions = {
+    title: i18n.t('quiz'),
+    ...LearnStackHeaderOptions,
+}
+
+const ChooseListScreenOptions: StackNavigationOptions = {
+    title: i18n.t('choose_list'),
+    ...LearnStackHeaderOptions,
+}
+
+const QuizScreenOptions: StackNavigationOptions = {
+    title: i18n.t('quiz'),
+    ...LearnStackHeaderOptions,
+}
+
+const SuccessQuizScreenOptions: StackNavigationOptions = {
+    title: '',
+    ...LearnStackHeaderOptions,
+}
+
+const ExamScreenOptions: StackNavigationOptions = {
+    title: i18n.t('exam'),
+    ...LearnStackHeaderOptions,
+}
+
+const SuccessExamScreenOptions: StackNavigationOptions = {
+    title: '',
     ...LearnStackHeaderOptions,
 }
 
