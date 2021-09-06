@@ -2,9 +2,8 @@
 
 ## Development setup
 
--   React Native version: 0.65.1
+-   React Native version: 0.62.0
 -   Node version: 14.17.3
--   Xcode version: 12.0 (at least)
 
 ## Run project
 
